@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fighter : Collidable
 {
     // public fields
-    public int hitpoint = 10;
+    public float hitpoint = 10;
     public int maxHitpoint = 10;
     public float pushRecoverySpeed = 0.02f;
 
@@ -22,8 +22,8 @@ public class Fighter : Collidable
         if(Time.time - lastImmune > immuneTime)
         {
             lastImmune = Time.time;
-            hitpoint -= dmg.damageAmount;
-            pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
+            hitpoint -= dmg.damageAmmount;
+            pushDirection = (transform.position - dmg.origin).normalized * dmg.knockBack;
 
             //GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.zero, 0.5f);
 
