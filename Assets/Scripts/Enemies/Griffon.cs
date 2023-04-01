@@ -11,7 +11,7 @@ public class Griffon : TestEnemy
     protected override void Start()
     {
         base.Start();
-        ShootCoroutine();
+        StartCoroutine(ShootCoroutine());
     }
 
     protected override void Update()
@@ -37,11 +37,14 @@ public class Griffon : TestEnemy
     private IEnumerator ShootCoroutine()
     {
         // Wait for a random amount of time
-        yield return new WaitForSeconds(Random.Range(3f, 6f));
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(3f, 6f));
 
-        Shoot();
+            Shoot();
 
-        ShootCoroutine();
+            StartCoroutine(ShootCoroutine());
+        }
     }
 
     private void Shoot()
@@ -51,6 +54,6 @@ public class Griffon : TestEnemy
 
     protected override void Death()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }
