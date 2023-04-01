@@ -35,18 +35,17 @@ public class Projectile : Collidable
             
         }
 
-        else if (coll.CompareTag("Player"))
+        else if (coll.CompareTag("Dragon"))
         {
-            Debug.Log("Collided with Player");
-
             OnProjectilePlayerHit(coll);
         }
+
     }
 
     // what to do with projectile when it hits an, e.g explode
     protected virtual void OnProjectileEnemyHit(Collider2D coll)
     {
-        Destroy(gameObject);
+
     }
 
     // what to do with projectile when it expires, e.g explode
