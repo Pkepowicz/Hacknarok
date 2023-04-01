@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragons: []
-  horizontalSpeed: 0
-  verticalSpeed: 0
+  horizontalSpeed: 10
+  verticalSpeed: 10
 --- !u!4 &673823601
 Transform:
   m_ObjectHideFlags: 0

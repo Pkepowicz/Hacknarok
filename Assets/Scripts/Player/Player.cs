@@ -39,7 +39,28 @@ public class Player : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * horizontal * horizontalSpeed * Time.deltaTime);
         float vertical = Input.GetAxis("Vertical");
-        transform.Translate(Vector2.right * vertical * verticalSpeed * Time.deltaTime);
+        transform.Translate(Vector2.up * vertical * verticalSpeed * Time.deltaTime);
+        
+        // restrict player movement to game screen with 100 pixel border
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);
+        pos.y = Mathf.Clamp(pos.y, 0.1f, 0.9f);
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
+        //Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        //pos.x = Mathf.Clamp01(pos.x);
+        //pos.y = Mathf.Clamp01(pos.y);
+        //transform.position = Camera.main.ViewportToWorldPoint(pos);
+        
 
     }
+            
+        
+        
+        //Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        //pos.x = Mathf.Clamp01(pos.x);
+        //pos.y = Mathf.Clamp01(pos.y);
+        //transform.position = Camera.main.ViewportToWorldPoint(pos);
+        
+
+    
 }
