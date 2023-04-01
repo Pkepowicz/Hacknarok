@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TestEnemy : Fighter
 {
+    public float speedToWaypoint = 3.0f;
     public float moveSpeedX = 2.0f;
     public float moveSpeedY = 2.0f;
     public Vector3 stationaryPosition;
@@ -26,12 +27,11 @@ public class TestEnemy : Fighter
         if(!isOnPosition)
         {
             Vector3 direction = stationaryPosition - transform.position;
-            transform.position += direction.normalized * horizontalSpeed * Time.deltaTime;
+            transform.position += direction.normalized * speedToWaypoint * Time.deltaTime;
             if(direction.magnitude <= tolerance)
             {
                 isOnPosition = true;
             }
-            return;
         }
         if (transform.position.x < stationaryPosition.x - maxHorizontalMove)
         {
