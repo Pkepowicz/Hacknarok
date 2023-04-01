@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     private List<GameObject> drg;  // list of all dragon GameObjects
 
+    private Vector3 mouseWorldPosition = new Vector3(0, -3, 0);
+
     [SerializeField]
     private float speed = 400f;
 
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = new Vector3(0, -3, 0);
         drg = GameObject.FindGameObjectsWithTag("Dragon").ToList();
         
         foreach (GameObject dragon in drg)
@@ -41,8 +44,11 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 0));
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 mousePos = Input.mousePosition;
+            mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 0));
+        }
         float distanceToPoint = (mouseWorldPosition-transform.position).magnitude;
         float coefficient = (distanceToPoint / Screen.width) * 5;
         coefficient = Mathf.Clamp(coefficient, 0.4f, 1f);
