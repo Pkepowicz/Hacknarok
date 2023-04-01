@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         drg = GameObject.FindGameObjectsWithTag("Dragon").ToList();
+        Debug.Log(drg.Count);
         
         foreach (GameObject dragon in drg)
         {
