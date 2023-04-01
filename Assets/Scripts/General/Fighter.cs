@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fighter : MonoBehaviour
+public class Fighter : Collidable
 {
     // public fields
     public int hitpoint = 10;

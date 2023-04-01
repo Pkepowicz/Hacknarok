@@ -10,21 +10,23 @@ public abstract class Dragon : Fighter
     [SerializeField]
     private GameObject projectilePrefab;
 
-    protected float damage;
-    protected float attackSpeed; // time between attacks, 0.5 means 0.5 time between each attack
+    [SerializeField]
+    protected float damage = 1, attackSpeed = 1; // time between attacks, 0.5 means 0.5 time between each attack
+ 
 
-    IEnumerator Shoot()
+    public IEnumerator Shoot()
     {
         while (true)
         {
+            
             yield return new WaitForSeconds(attackSpeed);
-            // Shoot projectile
+            ShootProjectile();
         }
     }
 
     protected void ShootProjectile()
     {
-        
+        Debug.Log(dragonType + " dragon just fired a projectile");
     }
 
 
