@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class Fireball : Projectile
+public class Fireball : Projectile
 {
     // variables for damaging enemies
     private float damage;
@@ -49,36 +49,36 @@ using UnityEngine;
             origin = transform.position
         };
 
-        if (igniteEnemies)
+        /*if (igniteEnemies)
         {
             GameObject enemyHit = coll.gameObject;
             GameObject currentBurn =
                 Instantiate(burn, enemyHit.transform.position, Quaternion.identity, enemyHit.transform);
             // pass paremeters to burn added to enemy
             currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
-        }
+        }*/
         
         coll.SendMessage("ReceiveDamage", dmg);
-        if (explodeAtDeath is true)
+        /*if (explodeAtDeath is true)
         {
             Explode();
-        }
+        }*/
         Destroy(gameObject);
     }
     
     // what to do with projectile when it's lifetime ends
-    protected override void OnProjectileEnd()
+    /*protected override void OnProjectileEnd()
     {
         if (explodeAtDeath is true)
         {
             Explode();
         }
         Destroy(gameObject);
-    }
+    }*/
 
     
     // what to do with projectile when it hits the wall
-    protected override void OnProjectileWallHit(Collider2D coll)
+    /*protected override void OnProjectileWallHit(Collider2D coll)
     {
         if (explodeAtDeath is true)
         {
@@ -93,15 +93,15 @@ using UnityEngine;
             
         }
         Destroy(gameObject);
-    }
+    }*/
 
     // create explosion game object and pass parameters
-    private void Explode()
+    /*private void Explode()
     {
         //Debug.Log("Exploding");
         GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         
         // pass parameters about explosion to newly created explosion object
         currentExplosion.GetComponent<FireballExplosion>().PassParameters(explosionDamage, explosionRadius, explosionKnockbackForce);
-    }
-}*/
+    }*/
+}
