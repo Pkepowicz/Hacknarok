@@ -13,39 +13,45 @@ public class FireDragon : Dragon
     {
         if (lvl == 2)
         {
-            
+            damage += 2;
         }
         else if (lvl == 3)
         {
-            
+            damage += 1;
+            attackSpeed -= 0.05f;
         }
         else if (lvl == 4)
         {
-            
+            attackSpeed -= 0.1f;
         }
         else if (lvl == 5)
         {
-            
+            explodingShoots = true;
+            Debug.Log("Now hits will explode");
         }
         else if (lvl == 6)
         {
-            
+            damage += 1;
+            attackSpeed -= 0.05f;
         }
         else if (lvl == 7)
         {
-            
+            explodingCooldown -= 1;
         }
         else if (lvl == 8)
         {
-            
+            explodingCooldown -= 1;
+            damage += 1;
         }
         else if (lvl == 9)
         {
-            
+            attackSpeed -= 0.1f;
         }
         else if (lvl == 10)
         {
-            
+            damage += 1;
+            attackSpeed -= 0.05f;
+            explodingCooldown -= 1;
         }
     }
 
@@ -60,10 +66,18 @@ public class FireDragon : Dragon
                 explodingCounter = 0;
                 foreach (Projectile proj in projectiles)
                 {
-                    
+                    proj.PassParameters(damage, true, 2, false, 0);
+                    return;
                 }
             }
         }
+        
+        foreach (Projectile proj in projectiles)
+        {
+            proj.PassParameters(damage, false, 2, false, 0);
+            return;
+        }
+        
     }
     
     

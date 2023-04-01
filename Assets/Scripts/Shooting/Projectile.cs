@@ -44,7 +44,7 @@ public class Projectile : Collidable
 
     }
 
-    protected virtual void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
+    public virtual void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
     {
         
     }

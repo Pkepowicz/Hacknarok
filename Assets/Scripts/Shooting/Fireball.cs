@@ -32,7 +32,7 @@ public class Fireball : Projectile
     
 
     // when creating projectile, pass parameters abut it
-    protected override void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
+    public override void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
     {
         dmg = damage;
         explodeAtDeath = fireballExplode;
@@ -41,12 +41,12 @@ public class Fireball : Projectile
     }
     
     // what to do with projectile when it hits an enemy
-    /*protected override void OnProjectileEnemyHit(Collider2D coll)
+    protected override void OnProjectileEnemyHit(Collider2D coll)
     {
-        Damage dmg = new Damage()
+        Damage damage = new Damage()
         {
-            damageAmmount = damage,
-            knockBack = knockbackForce,
+            damageAmmount = dmg,
+            knockBack = 0,
             origin = transform.position
         };
 
@@ -58,14 +58,15 @@ public class Fireball : Projectile
             // pass paremeters to burn added to enemy
             currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
         }*/
-    /*
-        coll.SendMessage("ReceiveDamage", dmg);
-        /*if (explodeAtDeath is true)
+    
+        coll.SendMessage("ReceiveDamage", damage);
+        if (explodeAtDeath is true)
         {
             Explode();
         }
         Destroy(gameObject);
-    }*/
+    }
+    
     
     // what to do with projectile when it's lifetime ends
     /*protected override void OnProjectileEnd()
@@ -97,12 +98,12 @@ public class Fireball : Projectile
     }*/
 
     // create explosion game object and pass parameters
-    /*private void Explode()
+    private void Explode()
     {
         //Debug.Log("Exploding");
-        GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        //GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         
         // pass parameters about explosion to newly created explosion object
-        currentExplosion.GetComponent<FireballExplosion>().PassParameters(explosionDamage, explosionRadius, explosionKnockbackForce);
-    }*/
+        //currentExplosion.GetComponent<FireballExplosion>().PassParameters(explosionDamage, explosionRadius, explosionKnockbackForce);
+    }
 }
