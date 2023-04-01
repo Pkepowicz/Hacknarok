@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private List<Dragon>dragons; // list of all dragon scripts
-
+    [SerializeField]
     private List<GameObject> drg;  // list of all dragon GameObjects
 
     private Vector3 mouseWorldPosition = new Vector3(0, -3, 0);
@@ -27,16 +27,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(0, -3, 0);
-        drg = GameObject.FindGameObjectsWithTag("Dragon").ToList();
-        
         foreach (GameObject dragon in drg)
         {
             dragons.Add(dragon.GetComponent<Dragon>());
         }
-
-        DeactivateAllDragons();
         ActivateDragon(0);
-        
         
     }
 
