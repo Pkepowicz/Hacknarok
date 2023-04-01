@@ -135,6 +135,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1680606034}
     m_Modifications:
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_text
+      value: SETTINGS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -245682866555010592, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: sceneName
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1579986569}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6679108589709702247, guid: d45aed1ec650a484783ecfb667818121, type: 3}
       propertyPath: m_Name
       value: Settings_Button
@@ -284,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5af35461129c1504bb72a7997107a84d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aac31f893a66efe4eb0dc398d05cdafe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -309,6 +357,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1680606034}
     m_Modifications:
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_text
+      value: QUIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -245682866555010592, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: sceneName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1398446610}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6679108589709702247, guid: d45aed1ec650a484783ecfb667818121, type: 3}
       propertyPath: m_Name
       value: Quit_Button
@@ -404,11 +500,44 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6841074972055590302, guid: d45aed1ec650a484783ecfb667818121, type: 3}
   m_PrefabInstance: {fileID: 946654241}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1398446610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+  m_PrefabInstance: {fileID: 946654241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0ce178ec6dae4fabcaaf328e97bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1415981395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+  m_PrefabInstance: {fileID: 1855048904}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0ce178ec6dae4fabcaaf328e97bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1486023871 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6841074972055590302, guid: d45aed1ec650a484783ecfb667818121, type: 3}
   m_PrefabInstance: {fileID: 408085938}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1579986569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+  m_PrefabInstance: {fileID: 408085938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0ce178ec6dae4fabcaaf328e97bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592572148
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +852,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1680606034}
     m_Modifications:
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_text
+      value: SHOP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -245682866555010592, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: sceneName
+      value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1415981395}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6679108589709702247, guid: d45aed1ec650a484783ecfb667818121, type: 3}
       propertyPath: m_Name
       value: Shop_Button
@@ -818,6 +995,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6841074972055590302, guid: d45aed1ec650a484783ecfb667818121, type: 3}
   m_PrefabInstance: {fileID: 3686105666873792568}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1914092539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+  m_PrefabInstance: {fileID: 3686105666873792568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0ce178ec6dae4fabcaaf328e97bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3686105666873792568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,6 +1013,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1680606034}
     m_Modifications:
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -245682866555010592, guid: b0f2fb1a6809daf479884e9f3234567a, type: 2}
+    - target: {fileID: 4596623341470356030, guid: d45aed1ec650a484783ecfb667818121, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 4755260759617644219, guid: d45aed1ec650a484783ecfb667818121, type: 3}
       propertyPath: sceneName
       value: Game
@@ -832,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1680606035}
+      objectReference: {fileID: 1914092539}
     - target: {fileID: 5372789283600974991, guid: d45aed1ec650a484783ecfb667818121, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
