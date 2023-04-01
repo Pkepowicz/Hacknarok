@@ -2,37 +2,35 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public Vector2 areaSize;
-    public float spacing;
+    public GameObject prefab;
+    public BoxCollider2D spawnArea;
+    public BoxCollider2D gameArea;
+    public int count = 10;
 
     private void Start()
     {
-        // Get the number of children objects and calculate the rows and columns needed to fit them all
-        int childCount = transform.childCount;
-        int rows = Mathf.CeilToInt(Mathf.Sqrt(childCount));
-        int columns = Mathf.CeilToInt((float)childCount / rows);
-
-        // Calculate the size of each cell in the grid
-        float cellWidth = (areaSize.x - (spacing * (columns - 1))) / columns;
-        float cellHeight = (areaSize.y - (spacing * (rows - 1))) / rows;
-
-        // Loop through all the children objects and position them in the grid
-        int childIndex = 0;
-        for (int row = 0; row < rows; row++)
+        if (spawnArea == null)
         {
-            for (int column = 0; column < columns; column++)
-            {
-                if (childIndex >= childCount)
-                {
-                    break;
-                }
+            Debug.LogError("Spawn area is not set!");
+            return;
+        }
 
-                Transform childTransform = transform.GetChild(childIndex);
-                Vector3 newPosition = new Vector3(column * (cellWidth + spacing), row * (cellHeight + spacing), 0f);
-                childTransform.localPosition = newPosition;
-
-                childIndex++;
-            }
+        // Get the bounds of the spawn area box collider
+        Bounds spawnBounds = spawnArea.bounds;
+        Bounds gameBounds = gameArea.bounds;
+        
+        // Loop through the count and instantiate prefabs at random positions within the spawn area bounds
+        for (int i = 0; i < count; i++)
+        {
+            Vector3 position = new Vector3(Random.Range(spawnBounds.min.x, spawnBounds.max.x),
+                                           Random.Range(spawnBounds.min.y, spawnBounds.max.y),
+                                           transform.position.z);
+            Vector3 gamePosition = new Vector3(Random.Range(gameBounds.min.x, gameBounds.max.x),
+                                           Random.Range(gameBounds.min.y, gameBounds.max.y),
+                                           transform.position.z);
+            GameObject newObject = Instantiate(prefab, position, Quaternion.identity);
+            newObject.transform.parent = transform;
+            newObject.GetComponent<TestEnemy>().stationaryPosition = gamePosition;
         }
     }
 }
