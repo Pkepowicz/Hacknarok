@@ -5,12 +5,12 @@ using UnityEngine;
 public class Fireball : Projectile
 {
     // variables for damaging enemies
-    private float damage;
-    public float knockbackForce;
+    private float dmg;
+    private float expRadius; // radius of an explosion
     
     
     // possible modifications to basic fireball
-    //private bool explodeAtDeath = false;
+    private bool explodeAtDeath = false;
     //private bool igniteEnemies = false;
 
     // variables for burning
@@ -32,12 +32,13 @@ public class Fireball : Projectile
     
 
     // when creating projectile, pass parameters abut it
-    /*public void PassParameters(float dmg ,bool explode, bool ignite)
+    protected override void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
     {
-        damage = dmg;
-        explodeAtDeath = explode;
-        igniteEnemies = ignite;
-    }*/
+        dmg = damage;
+        explodeAtDeath = fireballExplode;
+        expRadius = explosionRadius;
+
+    }
     
     // what to do with projectile when it hits an enemy
     /*protected override void OnProjectileEnemyHit(Collider2D coll)

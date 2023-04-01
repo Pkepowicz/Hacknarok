@@ -33,7 +33,8 @@ public class Player : MonoBehaviour
         {
             dragons.Add(dragon.GetComponent<Dragon>());
         }
-        ActivateDragon(0);
+        DeactivateAllDragons();
+        ActivateDragon(1);
         
     }
 
