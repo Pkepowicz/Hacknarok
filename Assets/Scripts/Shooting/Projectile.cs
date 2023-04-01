@@ -13,6 +13,7 @@ public class Projectile : Collidable
     private void Start()
     {
         startTime = Time.time;
+        base.Start();
     }
     
 
@@ -29,11 +30,15 @@ public class Projectile : Collidable
         // interact with enemy, and destroy itself
         if (coll.CompareTag("Enemy"))
         {
+            Debug.Log("Collided with enemy");
             OnProjectileEnemyHit(coll);
+            
         }
 
         else if (coll.CompareTag("Player"))
         {
+            Debug.Log("Collided with Player");
+
             OnProjectilePlayerHit(coll);
         }
     }
@@ -50,15 +55,9 @@ public class Projectile : Collidable
         Destroy(gameObject);
     }
 
-    // some projectiles may bounce of the walls
-    protected virtual void OnProjectileWallHit(Collider2D coll)
-    {
-        Destroy(gameObject);
-    }
-
     protected virtual void OnProjectilePlayerHit(Collider2D coll)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
     
 } 

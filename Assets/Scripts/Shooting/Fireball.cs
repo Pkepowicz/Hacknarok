@@ -10,37 +10,37 @@ public class Fireball : Projectile
     
     
     // possible modifications to basic fireball
-    private bool explodeAtDeath = false;
-    private bool igniteEnemies = false;
+    //private bool explodeAtDeath = false;
+    //private bool igniteEnemies = false;
 
     // variables for burning
     //public GameObject burn;
     //public float igniteEfficieny = 0.5f; // what % of impact damage will be dealt as ignite damage during its duration
     
     // variables for explosion
-    [Header("Explosion settings")]
+    /*[Header("Explosion settings")]
     public int explosionDamage = 3;
     public float explosionRadius = 1f; // basic radius gets multiplied by this value 
-    public float explosionKnockbackForce = 2f;
+    public float explosionKnockbackForce = 2f;*/
     
     // prefab to instanciate when projectile explodes
-    public GameObject explosionPrefab;
+    //public GameObject explosionPrefab;
     
     // effect when hitting a wall
-    public GameObject hitWallEffect;
-    public Transform effectSpawnPoint;
+    //public GameObject hitWallEffect;
+    //public Transform effectSpawnPoint;
     
 
     // when creating projectile, pass parameters abut it
-    public void PassParameters(float dmg ,bool explode, bool ignite)
+    /*public void PassParameters(float dmg ,bool explode, bool ignite)
     {
         damage = dmg;
         explodeAtDeath = explode;
         igniteEnemies = ignite;
-    }
+    }*/
     
     // what to do with projectile when it hits an enemy
-    protected override void OnProjectileEnemyHit(Collider2D coll)
+    /*protected override void OnProjectileEnemyHit(Collider2D coll)
     {
         Damage dmg = new Damage()
         {
@@ -57,14 +57,14 @@ public class Fireball : Projectile
             // pass paremeters to burn added to enemy
             currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
         }*/
-        
+    /*
         coll.SendMessage("ReceiveDamage", dmg);
         /*if (explodeAtDeath is true)
         {
             Explode();
-        }*/
+        }
         Destroy(gameObject);
-    }
+    }*/
     
     // what to do with projectile when it's lifetime ends
     /*protected override void OnProjectileEnd()
