@@ -17,6 +17,12 @@ public abstract class Dragon : Fighter
     
     [SerializeField] public GameObject spawnPointParent;
 
+    private int level = 1;
+    private int experience = 0;
+
+    private int[] levelRequirements = { 100, 150, 200, 250, 300, 350, 400, 450, 500, 550 };
+    
+
     protected override void Start()
     {
         base.Start();
@@ -43,6 +49,34 @@ public abstract class Dragon : Fighter
             Instantiate(projectilePrefab, point.transform.position, Quaternion.identity);
         }
         
+    }
+
+    public void AddXp(int xp)
+    {
+        experience += xp;
+        if(experience >= levelRequirements[level - 1])
+        {
+            LevelUp();
+        }
+    }
+
+    private void LevelUp()
+    {
+        if (level < levelRequirements.Length)
+        {
+            level++;
+            Debug.Log("Level up! Now i'm lvl: " + level);
+            TriggerUpgrade(level);
+        }
+        else
+        {
+            Debug.Log("I'm Alrady max lvl!");
+        }
+    }
+
+    protected virtual void TriggerUpgrade(int lvl)
+    {
+        Debug.Log("setting upgrade for lvl: " + lvl);
     }
 
     protected override void OnCollide(Collider2D coll)

@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     private float speed = 400f;
 
     [SerializeField] private float minimalSpeedCoefficient = 0.4f;
+
+    [SerializeField] private Dragon currentDragon;
     
     
     
@@ -60,6 +62,7 @@ public class Player : MonoBehaviour
     public void ActivateDragon(int number)
     {
         drg[number].SetActive(true);
+        currentDragon = dragons[number];
         StartCoroutine(dragons[number].Shoot());
         Debug.Log("dragon " + number + " activated!");
     }
@@ -72,13 +75,10 @@ public class Player : MonoBehaviour
             drg[i].SetActive(false);
         }
     }
-    
-    public void ActivateAllDragons()
+
+    public void AddXp(int xp)
     {
-        foreach (GameObject dragon in drg)
-        {
-            dragon.SetActive(true);
-        }
+        currentDragon.AddXp(xp);
     }
     
 }
