@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class TestEnemy : Fighter
 {
@@ -13,11 +14,12 @@ public class TestEnemy : Fighter
     public float maxHorizontalMove = 30f;
     public float maxVerticalMove = 2.0f;
     private bool isOnPosition;
-    public float tolerance = 0.1f;
+    private float tolerance = 0.1f;
 
     protected override void Start()
     {
         base.Start();
+
     }
     
     protected override void Update()
@@ -51,5 +53,6 @@ public class TestEnemy : Fighter
         }
         transform.Translate(moveSpeedX * Time.deltaTime, moveSpeedY * Time.deltaTime, 0);
     }
+
 }
         

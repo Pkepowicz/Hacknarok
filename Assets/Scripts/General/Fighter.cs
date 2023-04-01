@@ -10,7 +10,7 @@ public class Fighter : Collidable
     public float pushRecoverySpeed = 0.02f;
 
     // Immunity
-    protected float immuneTime = 1.0f;
+    protected float immuneTime = 0.1f;
     protected float lastImmune;
 
     // Push
@@ -23,7 +23,7 @@ public class Fighter : Collidable
         {
             lastImmune = Time.time;
             hitpoint -= dmg.damageAmmount;
-            pushDirection = (transform.position - dmg.origin).normalized * dmg.knockBack;
+            //pushDirection = (transform.position - dmg.origin).normalized * dmg.knockBack;
 
             //GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.zero, 0.5f);
 
