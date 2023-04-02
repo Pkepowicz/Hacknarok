@@ -11,11 +11,13 @@ public class Boss : Fighter
     public float maxHorizontalMove = 3f;
     public GameObject prefab;
     public Transform[] spawnPoints;
-    
+    private bool isOnPosition = false;
+    private float tolerance = 0.1f;
+
     protected override void Start()
     {
         base.Start();
-        stationaryPosition = transform.position;
+        stationaryPosition = new Vector3(0,4,0);
         horizontalSpeed = moveSpeedX;
         StartCoroutine(Shoot());
     }
@@ -23,15 +25,16 @@ public class Boss : Fighter
     protected override void Update()
     {
         base.Update();
-        if (transform.position.x < stationaryPosition.x - maxHorizontalMove)
+        if (!isOnPosition)
         {
-            moveSpeedX = horizontalSpeed;
+            Vector3 direction = stationaryPosition - transform.position;
+            transform.position += direction.normalized * 0.2f * Time.deltaTime;
+            if (direction.magnitude <= tolerance)
+            {
+                isOnPosition = true;
+            }
         }
-        if (transform.position.x > stationaryPosition.x + maxHorizontalMove)
-        {
-            moveSpeedX = -horizontalSpeed;
-        }
-        transform.Translate(moveSpeedX * Time.deltaTime, 0, 0);
+
     }
 
     protected IEnumerator Shoot()
