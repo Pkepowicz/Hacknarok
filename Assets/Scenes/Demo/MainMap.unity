@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colList: []
-  prefab: {fileID: 1075780097515840576, guid: 14298c8ea1268ed429f5adc59fffcbc2, type: 3}
+  prefab: {fileID: 4984975055038723925, guid: 14298c8ea1268ed429f5adc59fffcbc2, type: 3}
   spawnArea: {fileID: 1695002620}
   gameArea: {fileID: 1695002619}
   count: 5
@@ -1135,6 +1135,7 @@ MonoBehaviour:
   - {fileID: 737235190}
   speed: 70
   minimalSpeedCoefficient: 0.4
+  currentDragon: {fileID: 0}
 --- !u!4 &1964572782
 Transform:
   m_ObjectHideFlags: 0
