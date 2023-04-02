@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colList: []
-  prefab: {fileID: 4984975055038723925, guid: 14298c8ea1268ed429f5adc59fffcbc2, type: 3}
+  prefab: {fileID: 5881678084277306163, guid: 24e81000471591d4ebf6f6d1d8b4c7ff, type: 3}
   spawnArea: {fileID: 1695002620}
   gameArea: {fileID: 1695002619}
   count: 5

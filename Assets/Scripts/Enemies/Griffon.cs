@@ -43,7 +43,7 @@ public class Griffon : TestEnemy
 
             Shoot();
 
-            StartCoroutine(ShootCoroutine());
+            //StartCoroutine(ShootCoroutine());
         }
     }
 
