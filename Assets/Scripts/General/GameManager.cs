@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // uncomment to text gaining XP
-        //StartCoroutine(XPLoop());
+        StartCoroutine(XPLoop());
     }
 
     public void GetXPFromMobKill(int xpAmount)

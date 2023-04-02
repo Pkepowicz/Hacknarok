@@ -18,13 +18,9 @@ public class Fireball : Projectile
     //public float igniteEfficieny = 0.5f; // what % of impact damage will be dealt as ignite damage during its duration
     
     // variables for explosion
-    /*[Header("Explosion settings")]
-    public int explosionDamage = 3;
-    public float explosionRadius = 1f; // basic radius gets multiplied by this value 
-    public float explosionKnockbackForce = 2f;*/
-    
+
     // prefab to instanciate when projectile explodes
-    //public GameObject explosionPrefab;
+    public GameObject explosionPrefab;
     
     // effect when hitting a wall
     //public GameObject hitWallEffect;
@@ -43,6 +39,7 @@ public class Fireball : Projectile
     // what to do with projectile when it hits an enemy
     protected override void OnProjectileEnemyHit(Collider2D coll)
     {
+        Debug.Log("Fireball hit enemy " + coll.name);
         Damage damage = new Damage()
         {
             damageAmmount = dmg,
@@ -59,7 +56,7 @@ public class Fireball : Projectile
             currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
         }*/
     
-        coll.SendMessage("ReceiveDamage", damage);
+        //coll.SendMessage("ReceiveDamage", damage);
         if (explodeAtDeath is true)
         {
             Explode();
@@ -100,10 +97,10 @@ public class Fireball : Projectile
     // create explosion game object and pass parameters
     private void Explode()
     {
-        //Debug.Log("Exploding");
-        //GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Debug.Log("Exploding");
+        GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         
         // pass parameters about explosion to newly created explosion object
-        //currentExplosion.GetComponent<FireballExplosion>().PassParameters(explosionDamage, explosionRadius, explosionKnockbackForce);
+        currentExplosion.GetComponent<FireballExplosion>().PassParameters(dmg, expRadius);
     }
 }

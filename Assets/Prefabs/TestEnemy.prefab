@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1075780097515840588}
   m_Layer: 0
   m_Name: TestEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,9 @@ MonoBehaviour:
   hitpoint: 10
   maxHitpoint: 10
   pushRecoverySpeed: 0.02
-  moveSpeed: 2
+  speedToWaypoint: 3
+  moveSpeedX: 2
+  moveSpeedY: 2
   stationaryPosition: {x: 0, y: 0, z: 0}
   horizontalSpeed: 1
   verticalSpeed: 1
