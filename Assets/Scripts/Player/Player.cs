@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
             dragons.Add(dragon.GetComponent<Dragon>());
         }
         DeactivateAllDragons();
-        ActivateDragon(0);
+        ActivateDragon(1);
         
     }
 
@@ -72,8 +72,12 @@ public class Player : MonoBehaviour
     {
         for(int i = 0; i < drg.Count; i++)
         {
-            StopCoroutine(dragons[i].Shoot());
-            drg[i].SetActive(false);
+            if (drg[i].activeSelf)
+            {
+                StopCoroutine(dragons[i].Shoot());
+                drg[i].SetActive(false);
+            }
+            
         }
     }
 

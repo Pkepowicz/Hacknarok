@@ -33,4 +33,9 @@ public class Collidable : MonoBehaviour
     {
         //Debug.Log("OnCollide was not implemented in " + this.name);
     }
+
+    protected void TurnOffColider()
+    {
+        boxCollider.enabled = false;
+    }
 }

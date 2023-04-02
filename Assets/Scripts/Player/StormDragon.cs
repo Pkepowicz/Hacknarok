@@ -4,15 +4,56 @@ using UnityEngine;
 
 public class StormDragon : Dragon
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool chainignShots = false;
+    private int chainingCooldown = 7; // how many shoots before the next explosion
+    private int chainingCounter = 0; // how many shoots have been done since the last explosion
+
+    protected override void TriggerUpgrade(int lvl)
     {
-        
+        if (lvl == 2)
+        {
+            damage += 2;
+        }
+        else if (lvl == 3)
+        {
+            damage += 1;
+            attackSpeed -= 0.05f;
+        }
+        else if (lvl == 4)
+        {
+            attackSpeed -= 0.1f;
+        }
+        else if (lvl == 5)
+        {
+            chainignShots = true;
+            Debug.Log("Now hits will explode");
+        }
+        else if (lvl == 6)
+        {
+            damage += 1;
+            attackSpeed -= 0.05f;
+        }
+        else if (lvl == 7)
+        {
+            chainingCooldown -= 1;
+        }
+        else if (lvl == 8)
+        {
+            chainingCooldown -= 1;
+            damage += 1;
+        }
+        else if (lvl == 9)
+        {
+            attackSpeed -= 0.1f;
+        }
+        else if (lvl == 10)
+        {
+            damage += 1;
+            attackSpeed -= 0.05f;
+            chainingCooldown -= 1;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }
