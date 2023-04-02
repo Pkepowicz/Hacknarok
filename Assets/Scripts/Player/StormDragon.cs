@@ -5,7 +5,7 @@ using UnityEngine;
 public class StormDragon : Dragon
 {
     private bool chainignShots = false;
-    private int chainingCooldown = 7; // how many shoots before the next explosion
+    private int chainingCooldown = 5; // how many shoots before the next explosion
     private int chainingCounter = 0; // how many shoots have been done since the last explosion
 
     protected override void TriggerUpgrade(int lvl)
@@ -52,6 +52,31 @@ public class StormDragon : Dragon
             attackSpeed -= 0.05f;
             chainingCooldown -= 1;
         }
+    }
+    
+    protected override void ShootProjectile()
+    {
+        base.ShootProjectile();
+        if (chainignShots)
+        {
+            chainingCounter++;
+            if (chainingCounter >= chainingCooldown)
+            {
+                chainingCounter = 0;
+                foreach (Projectile proj in projectiles)
+                {
+                    proj.PassParameters(damage, false, 0, true, 4);
+                    return;
+                }
+            }
+        }
+        
+        foreach (Projectile proj in projectiles)
+        {
+            proj.PassParameters(damage, false, 0, false, 0);
+            return;
+        }
+        
     }
 
 

@@ -4,28 +4,14 @@ using UnityEngine;
 
 public class Fireball : Projectile
 {
-    // variables for damaging enemies
+
     private float dmg;
     private float expRadius; // radius of an explosion
-    
-    
-    // possible modifications to basic fireball
+
     private bool explodeAtDeath = false;
-    //private bool igniteEnemies = false;
 
-    // variables for burning
-    //public GameObject burn;
-    //public float igniteEfficieny = 0.5f; // what % of impact damage will be dealt as ignite damage during its duration
-    
-    // variables for explosion
-
-    // prefab to instanciate when projectile explodes
     public GameObject explosionPrefab;
-    
-    // effect when hitting a wall
-    //public GameObject hitWallEffect;
-    //public Transform effectSpawnPoint;
-    
+
 
     // when creating projectile, pass parameters abut it
     public override void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)

@@ -32,8 +32,12 @@ public class LightningBolt : Projectile
         };
 
         coll.SendMessage("RecieveDamage", damage);
-        Instantiate(beenStruck, coll.transform);
-        Instantiate(ChainLightningEffect, coll.transform.position, Quaternion.identity, coll.transform);
+        if (chain)
+        {
+            Instantiate(beenStruck, coll.transform);
+            Instantiate(ChainLightningEffect, coll.transform.position, Quaternion.identity, coll.transform);
+        }
+        
         /*if (explodeAtDeath is true)
         {
             Explode();

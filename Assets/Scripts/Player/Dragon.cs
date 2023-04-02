@@ -55,7 +55,11 @@ public abstract class Dragon : Fighter
         projectiles.Clear();
         foreach (GameObject point in projectilesSpawnPoints)
         {
-            projectiles.Add(Instantiate(projectilePrefab, point.transform.position, Quaternion.identity).GetComponent<Projectile>());
+            if (point.activeSelf)
+            {
+                projectiles.Add(Instantiate(projectilePrefab, point.transform.position, Quaternion.identity).GetComponent<Projectile>());
+            }
+            
         }
         
     }
