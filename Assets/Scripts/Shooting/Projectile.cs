@@ -10,12 +10,12 @@ public class Projectile : Collidable
 
     public float speed = 2.5f;
     public float lifetime = 5f; // Not sure if needed
-    private float startTime;
+    public float startTime;
 
-    private void Start()
+    protected override void Start()
     {
-        startTime = Time.time;
         base.Start();
+        startTime = Time.time;
     }
     
 

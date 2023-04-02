@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 548688309}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -991,6 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123d2a3187f024b4889497e3ac0d0b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colList: []
   prefab: {fileID: 1075780097515840576, guid: 14298c8ea1268ed429f5adc59fffcbc2, type: 3}
   spawnArea: {fileID: 1695002620}
   gameArea: {fileID: 1695002619}

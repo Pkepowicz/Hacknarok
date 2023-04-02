@@ -10,10 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1075780097515840578}
   - component: {fileID: 1075780097515840577}
-  - component: {fileID: 1075780097515840579}
+  - component: {fileID: 3089951710022924515}
   - component: {fileID: 1075780097515840588}
   m_Layer: 0
+<<<<<<< HEAD:Assets/Prefabs/TestEnemy.prefab
   m_Name: TestEnemy
+=======
+  m_Name: Eagle
+>>>>>>> main:Assets/Prefabs/Eagle.prefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1075780097515840579
+--- !u!114 &3089951710022924515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075780097515840576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5792e5ebda6b20498ad2fecd5cf920f, type: 3}
+  m_Script: {fileID: 11500000, guid: 681b14486f838d844bdc3c11282b317c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   filter:
@@ -112,18 +116,25 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  hitpoint: 10
-  maxHitpoint: 10
+  hitpoint: 3
+  maxHitpoint: 3
   pushRecoverySpeed: 0.02
+<<<<<<< HEAD:Assets/Prefabs/TestEnemy.prefab
   speedToWaypoint: 3
+=======
+  speedToWaypoint: 3.4
+>>>>>>> main:Assets/Prefabs/Eagle.prefab
   moveSpeedX: 2
   moveSpeedY: 2
   stationaryPosition: {x: 0, y: 0, z: 0}
   horizontalSpeed: 1
   verticalSpeed: 1
   maxHorizontalMove: 2
-  maxVerticalMove: 1
-  tolerance: 0.1
+  maxVerticalMove: 2
+  damage: 1
+  speed: 4
+  isCharging: 0
+  target: {fileID: 0}
 --- !u!61 &1075780097515840588
 BoxCollider2D:
   m_ObjectHideFlags: 0

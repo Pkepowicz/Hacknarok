@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    public Collider2D[] colList;
     public GameObject prefab;
     public BoxCollider2D spawnArea;
     public BoxCollider2D gameArea;
     public int count = 10;
 
     private void Start()
-    {
+    {   
         if (spawnArea == null)
         {
             Debug.LogError("Spawn area is not set!");
