@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1900129617375559369}
   m_Layer: 0
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   speed: 2.5
   lifetime: 5
-  knockbackForce: 0
+  explosionPrefab: {fileID: 6049556471595045204, guid: 97c70af925a080d40bad512d5ea278b2, type: 3}
 --- !u!61 &1900129617375559369
 BoxCollider2D:
   m_ObjectHideFlags: 0
