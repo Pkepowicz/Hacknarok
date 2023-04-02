@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 2169740115592753739}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1156,6 +1156,7 @@ MonoBehaviour:
   attackSpeed: 1
   projectilesSpawnPoints: []
   spawnPointParent: {fileID: 2169740116724005450}
+  level: 1
 --- !u!1 &2169740116790857072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2169740116790857083
 Transform:
   m_ObjectHideFlags: 0
@@ -1228,6 +1229,7 @@ MonoBehaviour:
   attackSpeed: 1
   projectilesSpawnPoints: []
   spawnPointParent: {fileID: 2169740114943857180}
+  level: 1
 --- !u!212 &2169740116790857077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1376,7 +1378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2169740116983661964
 Transform:
   m_ObjectHideFlags: 0
@@ -1429,6 +1431,7 @@ MonoBehaviour:
   attackSpeed: 1
   projectilesSpawnPoints: []
   spawnPointParent: {fileID: 2169740115323116092}
+  level: 1
 --- !u!212 &2169740116983661970
 SpriteRenderer:
   m_ObjectHideFlags: 0
