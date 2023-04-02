@@ -54,6 +54,7 @@ public class Griffon : TestEnemy
 
     protected override void Death()
     {
+        EnemyManager.instance.enemiesRemaining -= 1;
         Destroy(gameObject);
     }
 }

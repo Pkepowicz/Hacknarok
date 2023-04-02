@@ -18,7 +18,7 @@ public class FireballExplosion : Explosion
                 origin = transform.position
             };
             
-            //coll.SendMessage("ReceiveDamage", dmg);
+            coll.SendMessage("RecieveDamage", dmg);
         }
     }
 }

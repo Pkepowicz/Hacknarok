@@ -45,6 +45,7 @@ public class Fireball : Projectile
             damageAmmount = dmg,
             knockBack = 0,
             origin = transform.position
+            
         };
 
         /*if (igniteEnemies)
@@ -56,7 +57,7 @@ public class Fireball : Projectile
             currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
         }*/
     
-        //coll.SendMessage("ReceiveDamage", damage);
+        coll.SendMessage("RecieveDamage", damage);
         if (explodeAtDeath is true)
         {
             Explode();
@@ -101,6 +102,6 @@ public class Fireball : Projectile
         GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         
         // pass parameters about explosion to newly created explosion object
-        currentExplosion.GetComponent<FireballExplosion>().PassParameters(dmg, expRadius);
+        currentExplosion.GetComponent<FireballExplosion>().PassParameters(dmg*1.5f, expRadius);
     }
 }

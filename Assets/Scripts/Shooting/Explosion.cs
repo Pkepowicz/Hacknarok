@@ -13,9 +13,10 @@ public class Explosion : Collidable
 
    
     
-    protected void Start()
+    protected override void Start()
     {
         // destroy this gameObject at the end of its animation
+        base.Start();
         Destroy(gameObject, animClip.length);
     }
     
