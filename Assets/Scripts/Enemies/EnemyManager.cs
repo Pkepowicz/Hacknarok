@@ -12,7 +12,8 @@ public class EnemyManager : MonoBehaviour
     private int currentWaveIndex = -1;
     private bool isCoroutineStarted1 = false;
     private bool isCoroutineStarted2 = false;
-
+    public string nextLevel;
+    
     private void Start()
     {   
         if (spawnArea == null)
@@ -25,6 +26,10 @@ public class EnemyManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(currentWaveIndex == prefabs.Length)
+        {
+            LevelLoader.Instance.LoadNextLevel(nextLevel);
+        }
         Debug.Log("Currentwaveindex" + currentWaveIndex);
         if (enemiesRemaining == 0 && !isCoroutineStarted1 && !isCoroutineStarted2)
         {
