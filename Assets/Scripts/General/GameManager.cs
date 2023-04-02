@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     {
         // If there is an instance, and it's not me, delete myself.
 
+        player = FindObjectOfType<Player>();
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // uncomment to text gaining XP
-        StartCoroutine(XPLoop());
+        //StartCoroutine(XPLoop());
     }
 
     public void GetXPFromMobKill(int xpAmount)
@@ -42,6 +43,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("Adding xp to Player");
         }
         
+    }
+    
+    public void ActivateDragon(int number)
+    {
+        player.ActivateDragon(number);
+    }
+
+    public void DeactivateAllDragons()
+    {
+        player.DeactivateAllDragons();
     }
     
 }
