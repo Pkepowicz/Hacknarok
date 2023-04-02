@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5881678084277306175}
   - component: {fileID: 2341055324797031070}
   m_Layer: 0
-  m_Name: Griffon 1
+  m_Name: Griffon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
