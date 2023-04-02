@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class Projectile : Collidable
 {
@@ -40,6 +42,11 @@ public class Projectile : Collidable
             OnProjectilePlayerHit(coll);
         }
 
+    }
+
+    public virtual void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
+    {
+        
     }
 
     // what to do with projectile when it hits an, e.g explode

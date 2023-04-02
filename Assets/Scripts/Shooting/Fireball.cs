@@ -5,12 +5,12 @@ using UnityEngine;
 public class Fireball : Projectile
 {
     // variables for damaging enemies
-    private float damage;
-    public float knockbackForce;
+    private float dmg;
+    private float expRadius; // radius of an explosion
     
     
     // possible modifications to basic fireball
-    //private bool explodeAtDeath = false;
+    private bool explodeAtDeath = false;
     //private bool igniteEnemies = false;
 
     // variables for burning
@@ -18,13 +18,9 @@ public class Fireball : Projectile
     //public float igniteEfficieny = 0.5f; // what % of impact damage will be dealt as ignite damage during its duration
     
     // variables for explosion
-    /*[Header("Explosion settings")]
-    public int explosionDamage = 3;
-    public float explosionRadius = 1f; // basic radius gets multiplied by this value 
-    public float explosionKnockbackForce = 2f;*/
-    
+
     // prefab to instanciate when projectile explodes
-    //public GameObject explosionPrefab;
+    public GameObject explosionPrefab;
     
     // effect when hitting a wall
     //public GameObject hitWallEffect;
@@ -32,20 +28,22 @@ public class Fireball : Projectile
     
 
     // when creating projectile, pass parameters abut it
-    /*public void PassParameters(float dmg ,bool explode, bool ignite)
+    public override void PassParameters(float damage, bool fireballExplode, float explosionRadius, bool lightChain, int chainAmount)
     {
-        damage = dmg;
-        explodeAtDeath = explode;
-        igniteEnemies = ignite;
-    }*/
+        dmg = damage;
+        explodeAtDeath = fireballExplode;
+        expRadius = explosionRadius;
+
+    }
     
     // what to do with projectile when it hits an enemy
-    /*protected override void OnProjectileEnemyHit(Collider2D coll)
+    protected override void OnProjectileEnemyHit(Collider2D coll)
     {
-        Damage dmg = new Damage()
+        Debug.Log("Fireball hit enemy " + coll.name);
+        Damage damage = new Damage()
         {
-            damageAmmount = damage,
-            knockBack = knockbackForce,
+            damageAmmount = dmg,
+            knockBack = 0,
             origin = transform.position
         };
 
@@ -57,14 +55,15 @@ public class Fireball : Projectile
             // pass paremeters to burn added to enemy
             currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
         }*/
-    /*
-        coll.SendMessage("ReceiveDamage", dmg);
-        /*if (explodeAtDeath is true)
+    
+        //coll.SendMessage("ReceiveDamage", damage);
+        if (explodeAtDeath is true)
         {
             Explode();
         }
         Destroy(gameObject);
-    }*/
+    }
+    
     
     // what to do with projectile when it's lifetime ends
     /*protected override void OnProjectileEnd()
@@ -96,12 +95,12 @@ public class Fireball : Projectile
     }*/
 
     // create explosion game object and pass parameters
-    /*private void Explode()
+    private void Explode()
     {
-        //Debug.Log("Exploding");
+        Debug.Log("Exploding");
         GameObject currentExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         
         // pass parameters about explosion to newly created explosion object
-        currentExplosion.GetComponent<FireballExplosion>().PassParameters(explosionDamage, explosionRadius, explosionKnockbackForce);
-    }*/
+        currentExplosion.GetComponent<FireballExplosion>().PassParameters(dmg, expRadius);
+    }
 }

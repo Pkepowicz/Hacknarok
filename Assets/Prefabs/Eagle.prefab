@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 3089951710022924515}
   - component: {fileID: 1075780097515840588}
   m_Layer: 0
+<<<<<<< HEAD:Assets/Prefabs/Eagle.prefab
   m_Name: Eagle
+=======
+  m_Name: TestEnemy
+>>>>>>> Domino:Assets/Prefabs/TestEnemy.prefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +119,11 @@ MonoBehaviour:
   hitpoint: 3
   maxHitpoint: 3
   pushRecoverySpeed: 0.02
+<<<<<<< HEAD:Assets/Prefabs/Eagle.prefab
   speedToWaypoint: 3.4
+=======
+  speedToWaypoint: 3
+>>>>>>> Domino:Assets/Prefabs/TestEnemy.prefab
   moveSpeedX: 2
   moveSpeedY: 2
   stationaryPosition: {x: 0, y: 0, z: 0}
