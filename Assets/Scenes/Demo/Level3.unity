@@ -1045,11 +1045,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
       propertyPath: waves.Array.data[0].x
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
       propertyPath: waves.Array.data[1].x
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 33534910269467650, guid: da1478785a056b74b905c50340303556, type: 3}
       propertyPath: m_RootOrder
