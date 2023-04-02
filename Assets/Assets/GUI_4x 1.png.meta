@@ -196,7 +196,7 @@ TextureImporter:
         width: 95
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,6 +204,27 @@ TextureImporter:
       bones: []
       spriteID: 18315d5bb54b56a418648983e2a27a19
       internalID: 1342024189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_4x 1_5
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 203
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9392141efc2ef794b96b42b7817266b2
+      internalID: 2091910013
       vertices: []
       indices: 
       edges: []
@@ -220,6 +241,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       GUI_4x 1_3: 214025940
+      GUI_4x 1_5: 2091910013
       GUI_4x 1_4: 1342024189
       GUI_4x 1_2: 325072245
       GUI_4x 1_0: -830451432
