@@ -15,7 +15,8 @@ public class ChangeScene : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(sceneName);
+            LevelLoader.Instance.LoadNextLevel(sceneName);
+            //SceneManager.LoadScene(sceneName);
         }
     }
 }
