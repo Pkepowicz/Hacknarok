@@ -12,8 +12,13 @@ GameObject:
   - component: {fileID: 5881678084277306162}
   - component: {fileID: 5881678084277306175}
   - component: {fileID: 2341055324797031070}
+<<<<<<< HEAD:Assets/Prefabs/Griffon.prefab
   m_Layer: 0
   m_Name: Griffon
+=======
+  m_Layer: 6
+  m_Name: Griffon 1
+>>>>>>> Domino:Assets/Prefabs/Griffon 1.prefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
