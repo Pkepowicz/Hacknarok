@@ -2036,6 +2036,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: nextLevel
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
       propertyPath: waves.Array.size
       value: 3
       objectReference: {fileID: 0}

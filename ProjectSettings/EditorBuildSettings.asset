@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo/Shop.unity
     guid: 15bb158f786831c4fa3008f939787c32
   - enabled: 1
-    path: Assets/Scenes/Demo/MainMap.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Demo/Level1.unity
+    guid: c0567160f9b08164e87be1eb2a6a8851
+  - enabled: 1
+    path: Assets/Scenes/Demo/Level2.unity
+    guid: b7d682a433cfc2749ba8762ae3f63fee
+  - enabled: 1
+    path: Assets/Scenes/Demo/Level3.unity
+    guid: 920567b776a4d094c8c7660098c64b76
   m_configObjects: {}

@@ -20,6 +20,7 @@ public class LevelLoader : MonoBehaviour
         {
             Instance = this;
         }
+        DontDestroyOnLoad(this);
     }
 
     public void LoadNextLevel(string scene)
