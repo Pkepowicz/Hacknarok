@@ -23,6 +23,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private void Start()
     {
         // uncomment to text gaining XP
@@ -47,12 +55,8 @@ public class GameManager : MonoBehaviour
     
     public void ActivateDragon(int number)
     {
-        player.ActivateDragon(number);
-    }
-
-    public void DeactivateAllDragons()
-    {
         player.DeactivateAllDragons();
+        player.ActivateDragon(number);
     }
     
 }

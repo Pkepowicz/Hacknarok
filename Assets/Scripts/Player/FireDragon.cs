@@ -5,8 +5,8 @@ using UnityEngine;
 public class FireDragon : Dragon
 {
 
-    private bool explodingShoots = false;
-    private int explodingCooldown = 7; // how many shoots before the next explosion
+    private bool explodingShoots = true;
+    private int explodingCooldown = 2; // how many shoots before the next explosion
     private int explodingCounter = 0; // how many shoots have been done since the last explosion
 
     protected override void TriggerUpgrade(int lvl)

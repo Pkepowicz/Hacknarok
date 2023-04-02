@@ -9,6 +9,7 @@ public abstract class Dragon : Fighter
     
     [SerializeField]
     private GameObject projectilePrefab;
+    private IEnumerator coroutine;
 
     [SerializeField]
     protected float damage = 1, attackSpeed = 1; // time between attacks, 0.5 means 0.5 time between each attack
@@ -19,6 +20,7 @@ public abstract class Dragon : Fighter
 
     protected List<Projectile> projectiles;
 
+    [SerializeField]
     private int level = 1;
     private int experience = 0;
 
@@ -34,6 +36,7 @@ public abstract class Dragon : Fighter
     {
         
         base.Start();
+        coroutine = Shoot();
         for (int i = 0; i < spawnPointParent.transform.childCount; i++)
         {
             projectilesSpawnPoints.Add(spawnPointParent.transform.GetChild(i).gameObject);
@@ -41,11 +44,22 @@ public abstract class Dragon : Fighter
     }
 
 
+    public void StartShootCoroutine()
+    {
+        StartCoroutine(coroutine);
+    }
+    
+    public void StopShootCoroutine()
+    {
+        StopCoroutine(coroutine);
+    }
+
     public IEnumerator Shoot()
     {
         while (true)
         {
             yield return new WaitForSeconds(attackSpeed);
+            Debug.Log("Dragon " + gameObject.name + " just shoot");
             ShootProjectile();
         }
     }

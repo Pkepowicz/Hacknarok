@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour
         {
             LevelLoader.Instance.LoadNextLevel(nextLevel);
         }
-        Debug.Log("Currentwaveindex" + currentWaveIndex);
+        //Debug.Log("Currentwaveindex" + currentWaveIndex);
         if (enemiesRemaining == 0 && !isCoroutineStarted1 && !isCoroutineStarted2)
         {
             StartCoroutine(Wave());

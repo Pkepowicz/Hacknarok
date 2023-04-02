@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class EarthDragon : Dragon
 {
+    protected override void Start()
+    {
+        base.Start();
+        projectilesSpawnPoints[0].SetActive(true);
+        projectilesSpawnPoints[1].SetActive(true);
+        projectilesSpawnPoints[2].SetActive(true);
+    }
+    
     protected override void TriggerUpgrade(int lvl)
     {
         if (lvl == 2)

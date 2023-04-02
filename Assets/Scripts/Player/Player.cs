@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
             dragons.Add(dragon.GetComponent<Dragon>());
         }
         DeactivateAllDragons();
-        ActivateDragon(2);
+        ActivateDragon(0);
         
     }
 
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, mouseWorldPosition, speed * Time.deltaTime * coefficient);
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);
-        pos.y = Mathf.Clamp(pos.y, 0.1f, 0.9f);
+        pos.y = Mathf.Clamp(pos.y, 0.3f, 0.9f);
         pos.z = 1;
         transform.position = Camera.main.ViewportToWorldPoint(pos);
 
@@ -64,19 +64,18 @@ public class Player : MonoBehaviour
     {
         drg[number].SetActive(true);
         currentDragon = dragons[number];
-        StartCoroutine(dragons[number].Shoot());
+        dragons[number].StartShootCoroutine();
         Debug.Log("dragon " + number + " activated!");
     }
 
     public void DeactivateAllDragons()
     {
-        for(int i = 0; i < drg.Count; i++)
+        Debug.Log("deactivaed all dragons");
+        for(int i = 0; i < dragons.Count; i++)
         {
-            if (drg[i].activeSelf)
-            {
-                StopCoroutine(dragons[i].Shoot());
-                drg[i].SetActive(false);
-            }
+            dragons[i].StopShootCoroutine();
+            drg[i].SetActive(false);
+            Debug.Log("Deactivated" + i + " dragon");
             
         }
     }
