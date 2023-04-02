@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa567f3bd307af840ab4cdc8970d23b9
+guid: b370f32398d4a76429ee010dbca04413
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -114,7 +114,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Untitled 20_0
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 374
+        width: 171
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd33fc92d87ca84b893ae8a805100a1
+      internalID: -1001500547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +146,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Untitled 20_0: -1001500547
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
