@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 770065084}
   - component: {fileID: 770065083}
   - component: {fileID: 770065082}
+  - component: {fileID: 770065086}
   m_Layer: 0
   m_Name: StormDragon
   m_TagString: Dragon
@@ -876,11 +877,11 @@ MonoBehaviour:
   maxHitpoint: 10
   pushRecoverySpeed: 0.02
   dragonType: Storm
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 8291282117123396126, guid: 30b7a79455fc7ec408f89276ed16b31a, type: 3}
   damage: 0
   attackSpeed: 0
   projectilesSpawnPoints: []
-  spawnPointParent: {fileID: 0}
+  spawnPointParent: {fileID: 186541052}
 --- !u!4 &770065085
 Transform:
   m_ObjectHideFlags: 0
@@ -897,6 +898,32 @@ Transform:
   m_Father: {fileID: 42805143}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &770065086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770065081}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.7, y: 8.83}
+    newSize: {x: 8.7, y: 8.83}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.7, y: 8.83}
+  m_EdgeRadius: 0
 --- !u!1 &886839719
 GameObject:
   m_ObjectHideFlags: 0
