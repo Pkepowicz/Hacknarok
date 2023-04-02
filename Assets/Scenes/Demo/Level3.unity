@@ -1840,6 +1840,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 5480430779953908933, guid: 8f5107045ce3f7f48b2e03bdd0711eac, type: 3}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
       propertyPath: waves.Array.data[0].x
       value: 4
       objectReference: {fileID: 0}
