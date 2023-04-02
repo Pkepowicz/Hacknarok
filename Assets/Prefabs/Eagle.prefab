@@ -142,13 +142,13 @@ MonoBehaviour:
   maxHitpoint: 10
   pushRecoverySpeed: 0.02
   speedToWaypoint: 3
-  moveSpeedX: 2
-  moveSpeedY: 2
+  moveSpeedX: 1.7
+  moveSpeedY: 1.2
   stationaryPosition: {x: 0, y: 0, z: 0}
-  horizontalSpeed: 10
-  verticalSpeed: 10
-  maxHorizontalMove: 30
-  maxVerticalMove: 2
+  horizontalSpeed: 1.7
+  verticalSpeed: 1.2
+  maxHorizontalMove: 2
+  maxVerticalMove: 1.5
   damage: 1
   speed: 5
   isCharging: 0

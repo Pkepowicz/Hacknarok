@@ -143,11 +143,11 @@ MonoBehaviour:
   pushRecoverySpeed: 0.02
   speedToWaypoint: 3
   moveSpeedX: 2
-  moveSpeedY: 2
+  moveSpeedY: 1
   stationaryPosition: {x: 0, y: 0, z: 0}
   horizontalSpeed: 2
-  verticalSpeed: 2
-  maxHorizontalMove: 3
-  maxVerticalMove: 3
+  verticalSpeed: 1
+  maxHorizontalMove: 2
+  maxVerticalMove: 2
   prefab: {fileID: 4021174937998337623, guid: 024734b807951a64eb86b7ff4640d481, type: 3}
   damage: 1
