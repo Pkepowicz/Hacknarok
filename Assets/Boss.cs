@@ -45,4 +45,11 @@ public class Boss : Fighter
             yield return new WaitForSeconds(1f);
         }
     }
+
+    protected override void Death()
+    {
+        //EnemyManager.instance.enemiesRemaining -= 1;
+        GameManager.Instance.GetXPFromMobKill(20);
+        Destroy(gameObject);
+    }
 }
