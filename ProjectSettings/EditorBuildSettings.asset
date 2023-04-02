@@ -7,13 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Demo/Menu.unity
-    guid: 4ce4d377c4e9c6a4c9348e73c9b05170
+    guid: b3016885ba4e5c148bc2b6aaec077674
+  - enabled: 1
+    path: Assets/Scenes/Demo/Map.unity
+    guid: 1cf67ea2408c77c489114353dd1f6fae
   - enabled: 1
     path: Assets/Scenes/Demo/Settings.unity
-    guid: 7314cf197a0ca0b4d9dabce76ee5b9fe
+    guid: 14e46244623250a49bcf7e8672c86a43
   - enabled: 1
     path: Assets/Scenes/Demo/Shop.unity
-    guid: 12593ad25e1609b499f9bdd5e6dfcff3
+    guid: 15bb158f786831c4fa3008f939787c32
   - enabled: 1
     path: Assets/Scenes/Demo/MainMap.unity
     guid: 2cda990e2423bbf4892e6590ba056729

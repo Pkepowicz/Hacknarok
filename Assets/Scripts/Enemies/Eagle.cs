@@ -57,6 +57,7 @@ public class Eagle : TestEnemy
     
     protected override void Death()
     {
+        EnemyManager.instance.enemiesRemaining -= 1;
         Destroy(this.gameObject);
     }
 }

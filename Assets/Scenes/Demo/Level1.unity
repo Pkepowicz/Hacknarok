@@ -1350,7 +1350,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.059317946, y: -1.5472766}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1361,7 +1361,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.7, y: 8.83}
+  m_Size: {x: 2.6021626, y: 4.284461}
   m_EdgeRadius: 0
 --- !u!95 &1545684918
 Animator:
@@ -1835,6 +1835,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[0].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[0].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[1].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[1].y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[2].x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[2].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[3].x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 33534910269467649, guid: da1478785a056b74b905c50340303556, type: 3}
+      propertyPath: waves.Array.data[3].y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 33534910269467650, guid: da1478785a056b74b905c50340303556, type: 3}
       propertyPath: m_RootOrder
       value: 4

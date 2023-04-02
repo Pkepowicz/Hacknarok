@@ -34,6 +34,15 @@ public class Fireball : Projectile
             
         };
 
+        /*if (igniteEnemies)
+        {
+            GameObject enemyHit = coll.gameObject;
+            GameObject currentBurn =
+                Instantiate(burn, enemyHit.transform.position, Quaternion.identity, enemyHit.transform);
+            // pass paremeters to burn added to enemy
+            currentBurn.GetComponent<Burn>().CalculateBurnDamage(damage, igniteEfficieny);
+        }*/
+    
         coll.SendMessage("RecieveDamage", damage);
         if (explodeAtDeath is true)
         {

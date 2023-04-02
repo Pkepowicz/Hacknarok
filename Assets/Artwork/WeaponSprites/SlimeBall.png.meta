@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5fd01a5e587e01e4581b00b7b57eb25a
+guid: d8dbbee734267124d844ab1d8b170d03
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,80 +100,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GUI_4x 1_0
+      name: Fireballs_0
       rect:
         serializedVersion: 2
-        x: 195
-        y: 324
-        width: 28
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf964818eeb986f4995c20abf526b205
-      internalID: -830451432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_4x 1_1
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 324
-        width: 28
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a531ba2c6eb1798459fae490abdbb4ae
-      internalID: 1267902343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_4x 1_2
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 332
-        width: 31
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 363e3faffeb348b4b98beac124aac663
-      internalID: 325072245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_4x 1_3
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 161
+        x: 0
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940185b4efebe53448c925dab97b4ca4
-      internalID: 214025940
+      spriteID: c786babd02cd4cf439e1c024084dd910
+      internalID: -754370781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x 1_4
+      name: Fireballs_1
       rect:
         serializedVersion: 2
-        x: 353
-        y: 84
-        width: 95
-        height: 12
+        x: 32
+        y: 0
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18315d5bb54b56a418648983e2a27a19
-      internalID: 1342024189
+      spriteID: e586b9cfa8309734b842e63ce91a8ffb
+      internalID: -457511819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x 1_5
+      name: Fireballs_2
       rect:
         serializedVersion: 2
-        x: 523
-        y: 203
-        width: 42
-        height: 42
+        x: 64
+        y: 0
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +172,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9392141efc2ef794b96b42b7817266b2
-      internalID: 2091910013
+      spriteID: 32136ced4924f064598e30822d3f933c
+      internalID: 511411432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fireballs_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2f9850d2a68ec4687dc5bd0a456bc3
+      internalID: -2920176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fireballs_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c95a25eec045740ae4927969501d34
+      internalID: -1450646631
       vertices: []
       indices: 
       edges: []
@@ -240,12 +231,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GUI_4x 1_3: 214025940
-      GUI_4x 1_5: 2091910013
-      GUI_4x 1_4: 1342024189
-      GUI_4x 1_2: 325072245
-      GUI_4x 1_0: -830451432
-      GUI_4x 1_1: 1267902343
+      Fireballs_2: 511411432
+      Fireballs_3: -2920176
+      Fireballs_4: -1450646631
+      Fireballs_1: -457511819
+      Fireballs_0: -754370781
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
